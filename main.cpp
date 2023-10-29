@@ -1,11 +1,11 @@
-#include <iostream>
+﻿#include <iostream>
 #include <cstring>
 #include <clocale>
 using namespace std;
 
 int main(){
     char buffer[100];
-    setlocale(LC_ALL,"ru");
+    setlocale(LC_ALL,"rus");
     int size = 1;
     int counter = 0;
     char**zadacha = new char*[size];
@@ -43,4 +43,8 @@ int main(){
     for (int i = 0; i<counter; i++){
 		cout  << i+1 << ". " << "Задача - " << zadacha[i] << " Дедлайн - " << dedline[i] << " Приоритет - " << prior[i] << endl; 
 	}
+    delete [] zadacha;
+    delete [] prior;
+    delete [] dedline;
+    return 0;
 }
